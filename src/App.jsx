@@ -14,7 +14,7 @@ function App() {
   return (
     <Router>
       <Sidebar onToggle={toggleSidebar} isOpen={isSidebarOpen} />
-      <Box ml={{ base: 0, md: 60 }} transition="margin-left 0.2s" ml={isSidebarOpen ? "250px" : "0"}>
+      <Box ml={{ base: 0, md: 60 }} transition="margin-left 0.2s, background-color 0.2s" bg={isSidebarOpen ? "blue.800" : "transparent"} ml={isSidebarOpen ? "250px" : "0"}>
         <Routes>
           <Route exact path="/" element={<Index />} />
           <Route path="/projects" element={<ProjectsPage />} />
